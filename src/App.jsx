@@ -5,8 +5,6 @@ import './App.css'
 
 gsap.registerPlugin(ScrollTrigger)
 
-// orientation
-
 function App() {
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -65,14 +63,14 @@ function App() {
       animation: tl,
       trigger: '#mountain',
       start: 'top top',
-      end: '+=2000',
-      scrub: true,
+      end: '+=3000',
+      scrub: 1,
       pin: true,
     })
   });
 
   return (
-    <div className='h-[4000px]'>
+    <div className='h-[5000px]'>
       <div className='relative' id='mountain'>
         {/* background images */}
         <div className='h-screen w-screen absolute overflow-hidden'>
@@ -83,7 +81,8 @@ function App() {
         </div>
         
         {/* hello text */}
-        <h1 className='font-hyhero text-9xl text-red-500 text-center w-screen hello-text absolute z-10 top-[26vh]' style={{ textShadow: '5px -5px 3px white' }}>Hello. This is Tom.</h1>
+        <h1 className='font-hyhero text-9xl text-red-500 hello-text absolute z-10 top-[26vh] left-[30vh]' style={{ textShadow: '5px -5px 3px white' }}>Hi There</h1>
+        <h1 className='font-hyhero text-9xl text-red-500 hello-text absolute z-10 top-[46vh] left-[67vh]' style={{ textShadow: '5px -5px 3px white' }}>This is Tom</h1>
 
         {/* clouds */}
         <div className='h-screen w-screen overflow-hidden absolute z-30'>
