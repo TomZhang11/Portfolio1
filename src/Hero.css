@@ -1,0 +1,4 @@
+.hello-text, .mountain-image, .cloud {
+  will-change: transform;
+  backface-visibility: hidden;
+}
