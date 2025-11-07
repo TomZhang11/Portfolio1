@@ -5,18 +5,18 @@ import './Hero.css'
 
 function Hero() {
   const cloudPositions = [
-    { top: "-15vh", left: "-20vh" },
-    { top: "-15vh", left: "30vh" },
-    { top: "-15vh", left: "70vh" },
-    { top: "-15vh", left: "120vh" },
-    { top: "20vh", left: "-20vh" },
-    { top: "20vh", left: "30vh" },
-    { top: "20vh", left: "80vh" },
-    { top: "20vh", left: "130vh" },
-    { top: "56vh", left: "-20vh" },
-    { top: "56vh", left: "30vh" },
-    { top: "56vh", left: "80vh" },
-    { top: "56vh", left: "130vh" },
+    { top: "-15vh", left: "-10vw" },
+    { top: "-15vh", left: "15vw" },
+    { top: "-15vh", left: "35vw" },
+    { top: "-15vh", left: "60vw" },
+    { top: "20vh", left: "-10vw" },
+    { top: "20vh", left: "15vw" },
+    { top: "20vh", left: "40vw" },
+    { top: "20vh", left: "65vw" },
+    { top: "56vh", left: "-10vw" },
+    { top: "56vh", left: "15vw" },
+    { top: "56vh", left: "40vw" },
+    { top: "56vh", left: "65vw" },
   ]
 
   useGSAP(() => {
@@ -29,34 +29,34 @@ function Hero() {
     }, 0)
     .to("#cloud1", {
       y: "-40vh",
-      x: "-100vh"
+      x: "-50vw"
     }, 0)
     .to("#cloud2", {
       y: "-50vh",
-      x: "-30vh"
+      x: "-15vw"
     }, 0)
     .to("#cloud3", {
       y: "-50vh",
-      x: "30vh"
+      x: "15vw"
     }, 0)
     .to("#cloud4", {
       y: "-40vh",
-      x: "100vh"
+      x: "50vw"
     }, 0)
 
     .to("#cloud5", {
-      x: "-100vh"
+      x: "-50vw"
     }, 0)
     .to("#cloud6", {
       y: "30vh",
-      x: "-120vh"
+      x: "-60vw"
     }, 0)
     .to("#cloud7", {
       y: "30vh",
-      x: "100vh"
+      x: "50vw"
     }, 0)
     .to("#cloud8", {
-      x: "100vh"
+      x: "50vw"
     }, 0)
     
     .to("#cloud9", {
@@ -93,8 +93,8 @@ function Hero() {
         </div>
         
         {/* hello text */}
-        <h1 className='font-hyhero text-9xl text-red-500 hello-text absolute z-10 top-[26vh] left-[30vh]' style={{ textShadow: '5px -5px 3px white' }}>Hi There</h1>
-        <h1 className='font-hyhero text-9xl text-red-500 hello-text absolute z-10 top-[46vh] left-[67vh]' style={{ textShadow: '5px -5px 3px white' }}>This is Tom</h1>
+        <h1 className='font-hyhero text-9xl text-red-500 hello-text absolute z-10 top-[26vh] left-[15vw]' style={{ textShadow: '5px -5px 3px white' }}>Hi There</h1>
+        <h1 className='font-hyhero text-9xl text-red-500 hello-text absolute z-10 top-[46vh] left-[33vw]' style={{ textShadow: '5px -5px 3px white' }}>This is Tom</h1>
 
         {/* clouds */}
         <div className='h-screen w-screen overflow-hidden absolute z-30'>

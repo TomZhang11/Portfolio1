@@ -1,6 +1,7 @@
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Hero from './Hero'
+import Ending from './Ending'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -12,17 +13,9 @@ function App() {
     <div className='h-[5000px]'>
       <Hero />
 
-      {/* <div className="w-64 h-32 bg-black text-white p-4 overflow-hidden text-ellipsis">
-        This is a long text that will be cut off inside the black box.
-      </div> */}
+      <div className='h-screen'></div>
 
-      {/* ending */}
-      <div className='relative h-screen'>
-        <div className=''>
-          
-        </div>
-
-      </div>
+      <Ending />
   </div>
   )
 }
