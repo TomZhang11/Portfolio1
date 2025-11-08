@@ -20,6 +20,9 @@ function Hero() {
   ]
 
   useGSAP(() => {
+    const width = window.innerWidth;
+    const isMobile = width < 768;
+    const isMedium = width >= 768 && width < 1024;
     const heroTL = gsap.timeline();
     heroTL.from(".hello-text", {
       y: "-86vh",
@@ -45,18 +48,18 @@ function Hero() {
     }, 0)
 
     .to("#cloud5", {
-      x: "-50vw"
+      x: "-140vw"
     }, 0)
     .to("#cloud6", {
       y: "30vh",
-      x: "-60vw"
+      x: isMobile ? "-140vw" : isMedium ? "-100vw" : "-60vw"
     }, 0)
     .to("#cloud7", {
       y: "30vh",
-      x: "50vw"
+      x: isMobile ? "130vw" : isMedium ? "90vw" : "50vw"
     }, 0)
     .to("#cloud8", {
-      x: "50vw"
+      x: "130vw"
     }, 0)
     
     .to("#cloud9", {
@@ -92,12 +95,12 @@ function Hero() {
           <div className='h-full w-full bg-cover bg-center mountain-image' style={{ backgroundImage: "url('/man.png')" }}></div>
         </div>
         
-        {/* hello text */}
-        <h1 className='font-hyhero text-9xl text-red-500 hello-text absolute z-10 top-[35vh] left-[31vw]' style={{ textShadow: '5px -5px 3px white' }}>Hi There</h1>
-        <h1 className='font-hyhero text-9xl text-red-500 hello-text absolute z-10 top-[55vh] left-[55vw] whitespace-nowrap' style={{ textShadow: '5px -5px 3px white' }}>This is Tom</h1>
+         {/* hello text */}
+         <h1 className='font-hyhero text-5xl md:text-7xl lg:text-9xl text-red-500 hello-text absolute z-10 top-[35vh] left-[31vw]' style={{ textShadow: '5px -5px 3px white' }}>Hi There</h1>
+         <h1 className='font-hyhero text-5xl md:text-7xl lg:text-9xl text-red-500 hello-text absolute z-10 top-[55vh] left-[55vw] whitespace-nowrap' style={{ textShadow: '5px -5px 3px white' }}>This is Tom</h1>
 
         {/* clouds */}
-        <div className='h-screen w-screen absolute z-30'>
+        <div className='h-screen w-screen overflow-hidden absolute z-30'>
           {cloudPositions.map((position, index) => (
             <Cloud key={index} id={`cloud${index+1}`} top={position.top} left={position.left} />
           ))}
