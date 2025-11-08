@@ -7,5 +7,8 @@
 
 @font-face {
     font-family: 'HYDiShengYingXiongTi';
-    src: url('/fonts/HYDiShengYingXiongTi.ttf') format('truetype');
+    src: url('/fonts/hyhero.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
