@@ -3,3 +3,9 @@
 @theme {
     --font-hyhero: 'HYDiShengYingXiongTi', sans-serif;
 }
+
+
+@font-face {
+    font-family: 'HYDiShengYingXiongTi';
+    src: url('/HYDiShengYingXiongTi.ttf') format('truetype');
+}

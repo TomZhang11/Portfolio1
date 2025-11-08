@@ -5,7 +5,7 @@ import Ending from './Ending'
 
 gsap.registerPlugin(ScrollTrigger)
 
-// on different devices font wont display, clodus move, wont scroll
+// on different devices font wont display
 // cloud overflow hidden
 
 function App() {
