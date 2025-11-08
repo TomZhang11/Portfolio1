@@ -5,12 +5,12 @@ import Ending from './Ending'
 
 gsap.registerPlugin(ScrollTrigger)
 
-// on different devices
+// on different devices font wont display, clodus move
 // cloud overflow hidden
 
 function App() {
   return (
-    <div className='h-[5000px]'>
+    <div className='h-[5000px] bg-[#92bfc4]'>
       <Hero />
 
       <div className='h-screen'></div>

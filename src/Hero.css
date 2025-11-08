@@ -2,3 +2,7 @@
   will-change: transform;
   backface-visibility: hidden;
 }
+
+.cloud, .hello-text {
+  transform: translate(-50%, -50%);
+}

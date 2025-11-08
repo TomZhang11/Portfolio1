@@ -5,18 +5,18 @@ import './Hero.css'
 
 function Hero() {
   const cloudPositions = [
-    { top: "-15vh", left: "-10vw" },
-    { top: "-15vh", left: "15vw" },
-    { top: "-15vh", left: "35vw" },
-    { top: "-15vh", left: "60vw" },
-    { top: "20vh", left: "-10vw" },
-    { top: "20vh", left: "15vw" },
-    { top: "20vh", left: "40vw" },
-    { top: "20vh", left: "65vw" },
-    { top: "56vh", left: "-10vw" },
-    { top: "56vh", left: "15vw" },
-    { top: "56vh", left: "40vw" },
-    { top: "56vh", left: "65vw" },
+    { top: "11vh", left: "16vw" },
+    { top: "11vh", left: "41vw" },
+    { top: "11vh", left: "61vw" },
+    { top: "11vh", left: "86vw" },
+    { top: "46vh", left: "16vw" },
+    { top: "46vh", left: "41vw" },
+    { top: "46vh", left: "66vw" },
+    { top: "46vh", left: "91vw" },
+    { top: "82vh", left: "16vw" },
+    { top: "82vh", left: "41vw" },
+    { top: "82vh", left: "66vw" },
+    { top: "82vh", left: "91vw" },
   ]
 
   useGSAP(() => {
@@ -93,11 +93,11 @@ function Hero() {
         </div>
         
         {/* hello text */}
-        <h1 className='font-hyhero text-9xl text-red-500 hello-text absolute z-10 top-[26vh] left-[15vw]' style={{ textShadow: '5px -5px 3px white' }}>Hi There</h1>
-        <h1 className='font-hyhero text-9xl text-red-500 hello-text absolute z-10 top-[46vh] left-[33vw]' style={{ textShadow: '5px -5px 3px white' }}>This is Tom</h1>
+        <h1 className='font-hyhero text-9xl text-red-500 hello-text absolute z-10 top-[35vh] left-[31vw]' style={{ textShadow: '5px -5px 3px white' }}>Hi There</h1>
+        <h1 className='font-hyhero text-9xl text-red-500 hello-text absolute z-10 top-[55vh] left-[55vw] whitespace-nowrap' style={{ textShadow: '5px -5px 3px white' }}>This is Tom</h1>
 
         {/* clouds */}
-        <div className='h-screen w-screen overflow-hidden absolute z-30'>
+        <div className='h-screen w-screen absolute z-30'>
           {cloudPositions.map((position, index) => (
             <Cloud key={index} id={`cloud${index+1}`} top={position.top} left={position.left} />
           ))}
