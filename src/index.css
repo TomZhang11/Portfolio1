@@ -1,14 +1,10 @@
 @import "tailwindcss";
 
-@theme {
-    --font-hyhero: 'HYDiShengYingXiongTi', sans-serif;
-}
-
-
 @font-face {
     font-family: 'HYDiShengYingXiongTi';
-    src: url('/fonts/hyhero.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+    src: url('/hyhero.ttf') format('truetype');
+}
+
+@theme {
+    --font-hyhero: 'HYDiShengYingXiongTi', sans-serif;
 }
