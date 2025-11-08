@@ -20,6 +20,8 @@ function Hero() {
   ]
 
   useGSAP(() => {
+    gsap.set([".cloud", ".hello-text"], { xPercent: -50, yPercent: -50 });
+    
     const width = window.innerWidth;
     const isMobile = width < 768;
     const isMedium = width >= 768 && width < 1024;
