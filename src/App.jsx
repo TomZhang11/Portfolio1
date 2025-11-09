@@ -5,9 +5,6 @@ import Ending from './Ending'
 
 gsap.registerPlugin(ScrollTrigger)
 
-// on different devices font wont display
-// cloud overflow hidden
-
 function App() {
   return (
     <div className='h-[5000px] bg-[#92bfc4]'>

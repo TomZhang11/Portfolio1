@@ -1,9 +1,17 @@
+// html/css
+// 2 black box with clipped text
+
+// animation
+// bg scale
+// boxes move -> show text
+
+// scroll
 
 function Ending() {
     return (
       <div className='h-screen relative'>
         <div className='h-screen w-screen absolute overflow-hidden'>
-            <div className='h-full w-full bg-cover bg-center' style={{ backgroundImage: "url('/man_on_mountain.jpeg')" }}></div>
+            <div className='h-full w-full bg-cover bg-center' style={{ backgroundImage: "url('/walking.jpeg')" }}></div>
         </div>
 
         {/* <div className="text-white p-4 overflow-hidden text-ellipsis">
@@ -12,7 +20,7 @@ function Ending() {
         {/* <div className='h-[46vh] w-screen absolute bg-black text-center font-hyhero text-9xl text-transparent bg-clip-text'>
             The road ahead
         </div> */}
-        <div className='h-[46vh] w-[100vw] absolute'>
+        {/* <div className='h-[46vh] w-[100vw] absolute'>
             <svg viewBox="0 0 1600 400" className="w-[100vw] h-full">
                 <mask id="knockout">
                     <rect width="100%" height="100%" fill="white" />
@@ -22,10 +30,10 @@ function Ending() {
                 </mask>
                 <rect width="100vw" height="100%" fill="black" mask="url(#knockout)" className="100vw"/>
             </svg>
-        </div>
-        <div className='h-[27vh] w-screen absolute top-[73vh] bg-black'>
+        </div> */}
+        {/* <div className='h-[27vh] w-screen absolute top-[73vh] bg-black'>
             is bright
-        </div>
+        </div> */}
       </div>
     )
 }
