@@ -1,22 +1,46 @@
-/* Responsive font sizes for knockout text */
-.knockout-text {
-    font-size: 60px; /* Mobile */
+/* Responsive font sizes for knockout text - Top */
+.knockout-text-top {
+    font-size: 60px; /* Small Mobile */
 }
 
 @media (min-width: 640px) {
-    .knockout-text {
+    .knockout-text-top {
         font-size: 100px; /* Mobile */
     }
 }
 
 @media (min-width: 1280px) {
-    .knockout-text {
+    .knockout-text-top {
         font-size: 140px; /* Tablet */
     }
 }
 
 @media (min-width: 1440px) {
-    .knockout-text {
+    .knockout-text-top {
         font-size: 180px; /* Desktop */
+    }
+}
+
+/* Responsive font sizes for knockout text - Bottom (smaller) */
+.knockout-text-bottom {
+    font-size: 40px; /* Small Mobile */
+    transform: translateX(23vw);
+}
+
+@media (min-width: 640px) {
+    .knockout-text-bottom {
+        font-size: 60px; /* Mobile */
+    }
+}
+
+@media (min-width: 1280px) {
+    .knockout-text-bottom {
+        font-size: 80px; /* Tablet */
+    }
+}
+
+@media (min-width: 1440px) {
+    .knockout-text-bottom {
+        font-size: 100px; /* Desktop */
     }
 }

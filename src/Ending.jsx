@@ -1,3 +1,6 @@
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useGSAP } from '@gsap/react'
 import './Ending.css'
 
 // html/css
@@ -10,11 +13,10 @@ import './Ending.css'
 // scroll
 
 // how to animate easily
-// add the other one
 
 function Ending() {
     useGSAP(() => {
-        // 
+        // gsap.set([".knockout-text-bottom"], { xPercent: -50 });
     })
 
     return (
@@ -24,11 +26,11 @@ function Ending() {
             <div className='h-full w-full bg-cover bg-center' style={{ backgroundImage: "url('/walking.jpeg')" }}></div>
         </div>
 
-        {/* Black box with clipped text */}
+        {/* Top black box with clipped text */}
         <div className='absolute w-screen h-[46vh] top-0 left-0'>
           <svg viewBox="0 0 1920 460" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
             <defs>
-              <mask id="textKnockout">
+              <mask id="textKnockoutTop">
                 {/* White rectangle shows the black box */}
                 <rect width="100%" height="100%" fill="white" />
                 {/* Black text creates the knockout (transparent area) */}
@@ -37,7 +39,7 @@ function Ending() {
                   y="73%" 
                   textAnchor="middle" 
                   dominantBaseline="middle"
-                  className="knockout-text"
+                  className="knockout-text-top"
                   style={{ fontFamily: 'HYDiShengYingXiongTi, sans-serif' }}
                   fill="black"
                 >
@@ -46,7 +48,33 @@ function Ending() {
               </mask>
             </defs>
             {/* Black rectangle with the mask applied */}
-            <rect width="100%" height="100%" fill="black" mask="url(#textKnockout)" />
+            <rect width="100%" height="100%" fill="black" mask="url(#textKnockoutTop)" />
+          </svg>
+        </div>
+
+        {/* Bottom black box with clipped text */}
+        <div className='absolute w-screen h-[27vh] bottom-0 left-0'>
+          <svg viewBox="0 0 1920 270" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <mask id="textKnockoutBottom">
+                {/* White rectangle shows the black box */}
+                <rect width="100%" height="100%" fill="white" />
+                {/* Black text creates the knockout (transparent area) */}
+                <text 
+                  x="50%" 
+                  y="32%" 
+                  textAnchor="middle" 
+                  dominantBaseline="middle"
+                  className="knockout-text-bottom"
+                  style={{ fontFamily: 'HYDiShengYingXiongTi, sans-serif' }}
+                  fill="black"
+                >
+                  is bright
+                </text>
+              </mask>
+            </defs>
+            {/* Black rectangle with the mask applied */}
+            <rect width="100%" height="100%" fill="black" mask="url(#textKnockoutBottom)" />
           </svg>
         </div>
       </div>
