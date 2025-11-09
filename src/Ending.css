@@ -1,0 +1,22 @@
+/* Responsive font sizes for knockout text */
+.knockout-text {
+    font-size: 60px; /* Mobile */
+}
+
+@media (min-width: 640px) {
+    .knockout-text {
+        font-size: 100px; /* Mobile */
+    }
+}
+
+@media (min-width: 1280px) {
+    .knockout-text {
+        font-size: 140px; /* Tablet */
+    }
+}
+
+@media (min-width: 1440px) {
+    .knockout-text {
+        font-size: 180px; /* Desktop */
+    }
+}
