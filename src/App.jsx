@@ -5,9 +5,12 @@ import Ending from './Ending'
 
 gsap.registerPlugin(ScrollTrigger)
 
+// sections transition, clouds overflow
+// middle secitons
+
 function App() {
   return (
-    <div className='h-[5000px] bg-[#92bfc4]'>
+    <div className='bg-[#92bfc4]'>
       <Hero />
 
       <div className='h-screen'></div>

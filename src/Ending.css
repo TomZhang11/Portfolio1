@@ -1,3 +1,11 @@
+/* Performance optimization for animations */
+/* .walking-image,
+.knockout-box-top,
+.knockout-box-bottom {
+    will-change: transform;
+    backface-visibility: hidden;
+} */
+
 /* Responsive font sizes for knockout text - Top */
 .knockout-text-top {
     font-size: 60px; /* Small Mobile */
@@ -24,7 +32,6 @@
 /* Responsive font sizes for knockout text - Bottom (smaller) */
 .knockout-text-bottom {
     font-size: 40px; /* Small Mobile */
-    transform: translateX(23vw);
 }
 
 @media (min-width: 640px) {

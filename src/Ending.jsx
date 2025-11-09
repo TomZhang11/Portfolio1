@@ -3,31 +3,38 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useGSAP } from '@gsap/react'
 import './Ending.css'
 
-// html/css
-// 2 black box with clipped text
-
-// animation
-// bg scale
-// boxes move -> show text
-
-// scroll
-
-// how to animate easily
-
 function Ending() {
     useGSAP(() => {
-        // gsap.set([".knockout-text-bottom"], { xPercent: -50 });
+        gsap.set(".knockout-text-bottom", { x: "23vw" });
+
+        const endingTL = gsap.timeline();
+        endingTL
+            .to(".walking-image", { scale: 1.4, duration: 5, ease: "linear" })
+            .to(".walking-image", { scale: 1.0, duration: 5, ease: "linear" })
+            .from(".knockout-box-top", { y: "-100%", duration: 10, ease: "linear" }, 0)
+            .from(".knockout-box-bottom", { y: "100%", duration: 10, ease: "linear" }, 0)
+            .from(".knockout-text-mask-top", { fillOpacity: 0, duration: 0.5, ease: "linear" }, 10.5)
+            .from(".knockout-text-mask-bottom", { fillOpacity: 0, duration: 0.5, ease: "linear" }, 12);
+
+        ScrollTrigger.create({
+            animation: endingTL,
+            trigger: '#ending',
+            start: 'top top',
+            end: '+=7500',
+            scrub: 1,
+            pin: true,
+        });
     })
 
     return (
-      <div className='h-screen relative'>
+      <div className='h-screen relative overflow-hidden' id='ending'>
         {/* Background Image */}
         <div className='h-screen w-screen absolute overflow-hidden'>
-            <div className='h-full w-full bg-cover bg-center' style={{ backgroundImage: "url('/walking.jpeg')" }}></div>
+            <div className='h-full w-full bg-cover bg-center walking-image' style={{ backgroundImage: "url('/walking.jpeg')" }}></div>
         </div>
 
         {/* Top black box with clipped text */}
-        <div className='absolute w-screen h-[46vh] top-0 left-0'>
+        <div className='absolute w-screen h-[46vh] top-0 left-0 knockout-box-top'>
           <svg viewBox="0 0 1920 460" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
             <defs>
               <mask id="textKnockoutTop">
@@ -39,7 +46,7 @@ function Ending() {
                   y="73%" 
                   textAnchor="middle" 
                   dominantBaseline="middle"
-                  className="knockout-text-top"
+                  className="knockout-text-top knockout-text-mask-top"
                   style={{ fontFamily: 'HYDiShengYingXiongTi, sans-serif' }}
                   fill="black"
                 >
@@ -53,7 +60,7 @@ function Ending() {
         </div>
 
         {/* Bottom black box with clipped text */}
-        <div className='absolute w-screen h-[27vh] bottom-0 left-0'>
+        <div className='absolute w-screen h-[27vh] bottom-0 left-0 knockout-box-bottom'>
           <svg viewBox="0 0 1920 270" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
             <defs>
               <mask id="textKnockoutBottom">
@@ -65,7 +72,7 @@ function Ending() {
                   y="32%" 
                   textAnchor="middle" 
                   dominantBaseline="middle"
-                  className="knockout-text-bottom"
+                  className="knockout-text-bottom knockout-text-mask-bottom"
                   style={{ fontFamily: 'HYDiShengYingXiongTi, sans-serif' }}
                   fill="black"
                 >
