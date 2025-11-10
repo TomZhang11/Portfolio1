@@ -30,7 +30,7 @@ function Hero() {
       y: "-86vh",
     }, 0)
     .from(".mountain-image", {
-      scale: 1.2,
+      scale: 1.4,
     }, 0)
     .to("#cloud1", {
       y: "-40vh",
