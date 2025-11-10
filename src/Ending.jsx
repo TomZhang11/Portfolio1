@@ -30,7 +30,7 @@ function Ending() {
       <div className='h-screen relative overflow-hidden' id='ending'>
         {/* Background Image */}
         <div className='h-screen w-screen absolute overflow-hidden'>
-            <div className='h-full w-full bg-cover bg-center walking-image' style={{ backgroundImage: "url('/walking.jpeg')" }}></div>
+            <div className='h-full w-full bg-cover bg-center walking-image' style={{ backgroundImage: "url('/walking.jpg')" }}></div>
         </div>
 
         {/* Top black box with clipped text */}

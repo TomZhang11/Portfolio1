@@ -91,7 +91,7 @@ function Hero() {
       <div className='h-screen relative' id='mountain'>
         {/* background images */}
         <div className='h-screen w-screen absolute overflow-hidden'>
-          <div className='h-full w-full bg-cover bg-center mountain-image' style={{ backgroundImage: "url('/man_on_mountain.jpeg')" }}></div>
+          <div className='h-full w-full bg-cover bg-center mountain-image' style={{ backgroundImage: "url('/man_on_mountain.jpg')" }}></div>
         </div>
         <div className='h-screen w-screen absolute z-20 overflow-hidden'>
           <div className='h-full w-full bg-cover bg-center mountain-image' style={{ backgroundImage: "url('/man.png')" }}></div>
@@ -102,7 +102,7 @@ function Hero() {
          <h1 className='font-hyhero text-5xl md:text-7xl lg:text-9xl text-red-500 hello-text absolute z-10 top-[55vh] left-[55vw] whitespace-nowrap' style={{ textShadow: '5px -5px 3px white' }}>This is Tom</h1>
 
         {/* clouds */}
-        <div className='h-screen w-screen overflow-hidden absolute z-30'>
+        <div className='h-[137vh] w-screen overflow-hidden absolute z-30'>
           {cloudPositions.map((position, index) => (
             <Cloud key={index} id={`cloud${index+1}`} top={position.top} left={position.left} />
           ))}
